@@ -35,7 +35,7 @@ var outPutValue = estimationInPT.toFixed(1);
 
 var output = {
   de: `Geschätzter restlicher Aufwand für angezeigte Tickets: ${outPutValue} PT.`,
-  en: `Estimatet remaining effort for the displayed issues: ${outPutValue} PT.`
+  en: `Estimated remaining effort for the displayed issues: ${outPutValue} PT.`
 };
 
 alert(document.documentElement.lang in output ? output[document.documentElement.lang] : output.en);
