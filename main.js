@@ -31,7 +31,7 @@ allEstimates.forEach(timeString => {
 });
 
 var estimationInPT = remainingEstimationSum / (60*8);
-var outPutValue = estimationInPT.toFixed(2);
+var outPutValue = estimationInPT.toFixed(1);
 
 var output = {
   de: `Geschätzter restlicher Aufwand für angezeigte Tickets: ${outPutValue} PT.`,
