@@ -7,7 +7,7 @@ Installation
 ------------
 
 1. Go to your browser and create a new bookmark in the bookmark bar
-2. As Title / Name, enter: "🗒 Remaining Estimate"
+2. As Title / Name, enter: "🗒 Σ Remaining Estimate"
 3. As URL, enter: "javascript: [PASTE HERE THE SOURCE CODE FROM MAIN.JS]"
 
 Prerequisites / Preparation
@@ -23,6 +23,6 @@ Usage
 
 1. Go to your Jira instance
 2. Navigate to the issues navigator / issue search / filter view
-3. Press the new bookmark button "🗒 Remaining Estimate"
+3. Press the new bookmark button "🗒 Σ Remaining Estimate"
 
 => Result: You get a popup window with the estimated remaining effort of the currently displayed issues.
