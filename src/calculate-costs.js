@@ -22,6 +22,7 @@ function calculateEstimate() {
 
   var allEstimates = [];
   var remainingEstimationSum = 0;
+  var costPerHourDefault = 9000;
   var multipiers = {
     week: 2400,
     day: 480,
@@ -51,13 +52,15 @@ function calculateEstimate() {
     remainingEstimationSum += value * multipier;
   });
   
-  var estimationInPT = remainingEstimationSum / (60*8);
-  var outPutValue = estimationInPT.toFixed(1);
-  
+  var estimationInHours = remainingEstimationSum / 60;
+  var costPerHour = parseInt(window.prompt(`Please enter the cost per hour in €:`, costPerHourDefault / 100)) * 100;
+  var costSum = ((costPerHour * estimationInHours) / 100).toFixed(2);
+
   var output = {
-    de: `Geschätzter restlicher Aufwand für angezeigte Tickets: ${outPutValue} PT.`,
-    en: `Estimated remaining effort for the displayed issues: ${outPutValue} PT.`
+    de: `Ungefähre Kosten für angezeigte Tickets: ${costSum} €.`,
+    en: `Estimatet cost for displayed issues: ${costSum} €.`
   };
-  
+
   alert(document.documentElement.lang in output ? output[document.documentElement.lang] : output.en); 
+
 }
