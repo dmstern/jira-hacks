@@ -4,36 +4,35 @@ function calculateEstimate() {
 
   var l10n = {
     en: {
-      pleaseEnter: () => `Please enter the cost per hour in €:`,
+      pleaseEnter: () => 'Please enter the cost per hour in €:',
       costResult: costSum => `Estimatet cost for displayed issues: ${costSum} €.`,
-      notANumber: () => `This is not a number. Please try again.`,
+      notANumber: () => 'This is not a number. Please try again.',
     },
     de: {
-      pleaseEnter: () => `Bitte die Kosten für eine Arbeitsstunde in € eingeben:`,
+      pleaseEnter: () => 'Bitte die Kosten für eine Arbeitsstunde in € eingeben:',
       costResult: costSum => `Ungefähre Kosten für angezeigte Tickets: ${costSum} €.`,
-      notANumber: () => `Das ist leider keine gültige Zahl. Versuch's nochmal.`,
+      notANumber: () => 'Das ist leider keine gültige Zahl. Versuch\'s nochmal.',
     },
   };
 
-  var lang = document.documentElement.lang in l10n ? document.documentElement.lang : en;
-  var labels = l10n[lang];
+  var labels = document.documentElement.lang in l10n ? l10n[document.documentElement.lang] : l10n.en;
 
   var userIsInNavigator = document.querySelector('.navigator-container') !== null;
   if (!userIsInNavigator) {
-    alert(`Error: Please go to the Jira issue navigator.`);
+    alert('Error: Please go to the Jira issue navigator.');
     return;
   }
 
   var isDetailView = document.querySelector('.details-layout') !== null;
   if (isDetailView) {
-    alert(`Error: Please change view type to list.`);
+    alert('Error: Please change view type to list.');
     return;
   }
 
   var estimationCells = document.querySelectorAll('.aggregatetimeestimate');
 
   if (estimationCells.length < 1) {
-    alert(`Error: Please enable the column 'Σ Remaining Estimate.'`);
+    alert('Error: Please enable the column \'Σ Remaining Estimate.\'');
     return;
   }
 
@@ -71,7 +70,6 @@ function calculateEstimate() {
   
   var estimationInHours = remainingEstimationSum / 60;
   var costPerHour;
-
   
   costPerHour = parseFloat(window.prompt(labels.pleaseEnter(), costPerHourDefault / 100)) * 100;
 
