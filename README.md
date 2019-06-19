@@ -15,7 +15,7 @@ Installation
 (b) "💶 Calculate Costs" for the cost calculation button
 3. As URL, enter the content from \
 (a) [./bookmark-urls/estimate-effort](./bookmark-urls/estimate-effort) to get a time estimate button or \
-(b) [./bookmark-urls/calculate-effort](./bookmark-urls/calculate-effort) to get a cost calculation
+(b) [./bookmark-urls/calculate-costs](./bookmark-urls/calculate-costs) to get a cost calculation
 
 Prerequisites / Preparation
 ---------------------------
