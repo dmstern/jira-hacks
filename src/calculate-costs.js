@@ -1,6 +1,23 @@
 calculateEstimate();
 
 function calculateEstimate() {
+
+  var l10n = {
+    en: {
+      pleaseEnter: () => `Please enter the cost per hour in €:`,
+      costResult: costSum => `Estimatet cost for displayed issues: ${costSum} €.`,
+      notANumber: () => `This is not a number. Please try again.`,
+    },
+    de: {
+      pleaseEnter: () => `Bitte die Kosten für eine Arbeitsstunde in € eingeben:`,
+      costResult: costSum => `Ungefähre Kosten für angezeigte Tickets: ${costSum} €.`,
+      notANumber: () => `Das ist leider keine gültige Zahl. Versuch's nochmal.`,
+    },
+  };
+
+  var lang = document.documentElement.lang in l10n ? document.documentElement.lang : en;
+  var labels = l10n[lang];
+
   var userIsInNavigator = document.querySelector('.navigator-container') !== null;
   if (!userIsInNavigator) {
     alert(`Error: Please go to the Jira issue navigator.`);
@@ -53,14 +70,17 @@ function calculateEstimate() {
   });
   
   var estimationInHours = remainingEstimationSum / 60;
-  var costPerHour = parseInt(window.prompt(`Please enter the cost per hour in €:`, costPerHourDefault / 100)) * 100;
+  var costPerHour;
+
+  
+  costPerHour = parseFloat(window.prompt(labels.pleaseEnter(), costPerHourDefault / 100)) * 100;
+
+  if (isNaN(costPerHour)) {
+    alert(labels.notANumber());
+    return;
+  }
+
   var costSum = ((costPerHour * estimationInHours) / 100).toFixed(2);
 
-  var output = {
-    de: `Ungefähre Kosten für angezeigte Tickets: ${costSum} €.`,
-    en: `Estimatet cost for displayed issues: ${costSum} €.`
-  };
-
-  alert(document.documentElement.lang in output ? output[document.documentElement.lang] : output.en); 
-
+  alert(labels.costResult(costSum)); 
 }
