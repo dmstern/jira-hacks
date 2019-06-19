@@ -12,7 +12,7 @@ Installation
 1. Go to your browser and create a new bookmark in the bookmark bar
 2. As Title / Name, enter: \
 (a) "⏲ Σ Remaining Estimate" for time estimate button or \
-(b) "🖩 Calculate Costs" for the cost calculation button
+(b) "💶 Calculate Costs" for the cost calculation button
 3. As URL, enter the content from \
 (a) [./bookmark-urls/estimate-effort](./bookmark-urls/estimate-effort) to get a time estimate button or \
 (b) [./bookmark-urls/calculate-effort](./bookmark-urls/calculate-effort) to get a cost calculation
