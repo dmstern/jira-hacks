@@ -6,7 +6,7 @@ import getEstimationCells from './util/getEstimationCells';
 main();
 
 function main() {
-  const labels = getLabels(document.documentElement.lang);
+  const l10n = getLabels(document.documentElement.lang);
 
   try {
     const estimationCells = getEstimationCells();
@@ -15,17 +15,17 @@ function main() {
     const estimationInHours = remainingEstimationSum / 60;
     const costPerHour =
       parseFloat(
-        window.prompt(labels.pleaseEnter(), costPerHourDefault / 100)
+        window.prompt(l10n.pleaseEnter(), costPerHourDefault / 100)
       ) * 100;
 
     if (isNaN(costPerHour)) {
-      alert(labels.notANumber());
+      alert(l10n.notANumber());
       return;
     }
 
     const costSum = ((costPerHour * estimationInHours) / 100).toFixed(2);
 
-    alert(labels.costResult(costSum));
+    alert(l10n.costResult(costSum));
   } catch (error) {
     alert(error.message);
   }

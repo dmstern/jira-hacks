@@ -5,7 +5,7 @@ import getEstimationCells from './util/getEstimationCells';
 main();
 
 function main() {
-  const labels = getLabels(document.documentElement.lang);
+  const l10n = getLabels(document.documentElement.lang);
 
   try {
     const estimationCells = getEstimationCells();
@@ -14,7 +14,7 @@ function main() {
     const estimationInPT = remainingEstimationSum / (60 * 8);
     const outputValue = estimationInPT.toFixed(1);
     
-    alert(labels.estimateOutput(outputValue));
+    alert(l10n.estimateOutput(outputValue));
   } catch(error) {
     alert(error.message);
   }
