@@ -1,5 +1,5 @@
-Jira Estimate
-=============
+Jira Hacks
+==========
 
 This is tiny collection of bookmarklets to bring new features to Jira like
 

@@ -1,10 +1,10 @@
 {
-  "name": "jira-estimate",
+  "name": "jira-hacks",
   "version": "1.0.0",
   "description": "Sum up remaining estimation and calculate cost from a Jira filter list",
   "repository": {
     "type": "git",
-    "url": "https://gitlab.init.de/dmorgenstern/jira-estimate"
+    "url": "https://github.com/dmstern/jira-hacks"
   },
   "main": "index.js",
   "scripts": {
@@ -17,7 +17,7 @@
   "keywords": [
     "jira"
   ],
-  "author": "Daniel Morgenstern <daniel.morgenstern@init.de>",
+  "author": "Daniel Morgenstern <morgenstern.daniel@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "babel-minify": "^0.5.0",
