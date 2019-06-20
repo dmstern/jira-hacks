@@ -33,3 +33,13 @@ Usage
 3. Press the new bookmark button
 
 => Result: You get a popup window with the estimated remaining effort of the currently displayed issues.
+
+Build (Development)
+-------------------
+
+Clone this repo, navigate to its folder with a terminal and run:
+
+```bash
+npm install
+npm run build
+```
