@@ -7,21 +7,18 @@ export default function() {
   const userIsInNavigator =
     document.querySelector('.navigator-container') !== null;
   if (!userIsInNavigator) {
-    alert(labels.goToNavigator());
-    return false;
+    throw new Error(labels.goToNavigator());
   }
 
   const isDetailView = document.querySelector('.details-layout') !== null;
   if (isDetailView) {
-    alert(labels.changeViewTypeToList());
-    return false;
+    throw new Error(labels.changeViewTypeToList());
   }
 
   const estimationCells = document.querySelectorAll('.aggregatetimeestimate');
 
   if (estimationCells.length < 1) {
-    alert(labels.enableRemainingEstimateColumn());
-    return false;
+    throw new Error(labels.enableRemainingEstimateColumn());
   }
 
   return estimationCells;

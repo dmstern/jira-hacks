@@ -6,11 +6,16 @@ main();
 
 function main() {
   const labels = getLabels(document.documentElement.lang);
-  const estimationCells = getEstimationCells();
-  const remainingEstimationSum = sumRemainingEstimate(estimationCells);
 
-  const estimationInPT = remainingEstimationSum / (60 * 8);
-  const outputValue = estimationInPT.toFixed(1);
-
-  alert(labels.costResult(outputValue));
+  try {
+    const estimationCells = getEstimationCells();
+    const remainingEstimationSum = sumRemainingEstimate(estimationCells);
+    
+    const estimationInPT = remainingEstimationSum / (60 * 8);
+    const outputValue = estimationInPT.toFixed(1);
+    
+    alert(labels.estimateOutput(outputValue));
+  } catch(error) {
+    alert(error.message);
+  }
 }

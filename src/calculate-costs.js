@@ -7,24 +7,26 @@ main();
 
 function main() {
   const labels = getLabels(document.documentElement.lang);
-  const estimationCells = getEstimationCells();
-  if (estimationCells === false) return;
-  const remainingEstimationSum = sumRemainingEstimate(estimationCells);
-  if (remainingEstimationSum === false) return;
 
-  const estimationInHours = remainingEstimationSum / 60;
-  let costPerHour;
+  try {
+    const estimationCells = getEstimationCells();
+    const remainingEstimationSum = sumRemainingEstimate(estimationCells);
 
-  costPerHour =
-    parseFloat(window.prompt(labels.pleaseEnter(), costPerHourDefault / 100)) *
-    100;
+    const estimationInHours = remainingEstimationSum / 60;
+    const costPerHour =
+      parseFloat(
+        window.prompt(labels.pleaseEnter(), costPerHourDefault / 100)
+      ) * 100;
 
-  if (isNaN(costPerHour)) {
-    alert(labels.notANumber());
-    return;
+    if (isNaN(costPerHour)) {
+      alert(labels.notANumber());
+      return;
+    }
+
+    const costSum = ((costPerHour * estimationInHours) / 100).toFixed(2);
+
+    alert(labels.costResult(costSum));
+  } catch (error) {
+    alert(error.message);
   }
-
-  const costSum = ((costPerHour * estimationInHours) / 100).toFixed(2);
-
-  alert(labels.costResult(costSum));
 }
