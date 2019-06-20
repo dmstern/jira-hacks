@@ -1,7 +1,7 @@
-import { getLabels } from './l10n';
-import sumRemainingEstimate from './sumRemainingEstimate';
-import { costPerHourDefault } from './constants';
-import getEstimationCells from './getEstimationCells';
+import { getLabels } from './util/l10n';
+import sumRemainingEstimate from './util/sumRemainingEstimate';
+import { costPerHourDefault } from './util/constants';
+import getEstimationCells from './util/getEstimationCells';
 
 main();
 
