@@ -1,7 +1,7 @@
 {
   "name": "jira-estimate",
   "version": "1.0.0",
-  "description": "Sum up remaining estimation from a Jira filter list",
+  "description": "Sum up remaining estimation and calculate cost from a Jira filter list",
   "repository": {
     "type": "git",
     "url": "https://gitlab.init.de/dmorgenstern/jira-estimate"
