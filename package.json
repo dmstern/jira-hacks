@@ -8,7 +8,10 @@
   },
   "main": "index.js",
   "scripts": {
-    "build": "minify src -d build && node tools/wrap.js",
+    "bundle:effort": "rollup src/estimate-effort.js --file build/bundle/estimate-effort.js --format iife",
+    "bundle:costs": "rollup src/calculate-costs.js --file build/bundle/calculate-costs.js --format iife",
+    "bundle": "npm run bundle:effort && npm run bundle:costs",
+    "build": "npm run bundle && minify build/bundle -d build/min && node tools/wrap.js",
     "test": "eslint src"
   },
   "keywords": [
@@ -18,6 +21,7 @@
   "license": "ISC",
   "devDependencies": {
     "babel-minify": "^0.5.0",
-    "eslint": "^5.16.0"
+    "eslint": "^5.16.0",
+    "rollup": "^1.15.6"
   }
 }
