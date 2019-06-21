@@ -19,8 +19,7 @@ function main() {
       ) * 100;
 
     if (isNaN(costPerHour)) {
-      alert(l10n.notANumber());
-      return;
+      throw new Error(l10n.notANumber());
     }
 
     const costSum = ((costPerHour * estimationInHours) / 100).toFixed(2);
