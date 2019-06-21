@@ -1,6 +1,6 @@
 import { getLabels } from './util/l10n';
-import sumRemainingEstimate from './util/sumRemainingEstimate';
 import { costPerHourDefault } from './util/constants';
+import sumRemainingEstimate from './util/sumRemainingEstimate';
 import getEstimationCells from './util/getEstimationCells';
 
 try {

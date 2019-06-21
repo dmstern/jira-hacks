@@ -1,4 +1,4 @@
-export const labels = {
+const labels = {
   en: {
     pleaseEnter: () => 'Please enter the cost per hour in €:',
     costResult: costSum => `Estimatet cost for displayed issues: ${costSum} €.`,
