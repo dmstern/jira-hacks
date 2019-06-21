@@ -1,4 +1,4 @@
-import { multipiers } from './constants';
+import { minutesPer } from './constants';
 
 export default function(estimationCells) {
   const allEstimates = [];
@@ -18,7 +18,7 @@ export default function(estimationCells) {
 
     const timeStringParts = timeString.split(' ');
     const value = parseInt(timeStringParts[0]);
-    const multipier = multipiers[timeStringParts[1]];
+    const multipier = minutesPer[timeStringParts[1]];
     remainingEstimationSum += value * multipier;
   });
 
