@@ -10,7 +10,7 @@ export default function(estimationCells) {
     allEstimates.push(...parts);
   });
 
-  allEstimates.forEach(timeString => {
+  allEstimates.filter(isEstimated => isEstimated).forEach(timeString => {
     timeString = timeString.trim();
     if (timeString.endsWith('s')) {
       timeString = timeString.substring(0, timeString.length - 1);
