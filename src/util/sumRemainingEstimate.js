@@ -6,10 +6,6 @@ export default function(estimationCells) {
 
   estimationCells.forEach(cell => {
     const remainingEstimation = cell.innerHTML;
-    if (!remainingEstimation) {
-      return false;
-    }
-
     const parts = remainingEstimation.split(',');
     allEstimates.push(...parts);
   });
