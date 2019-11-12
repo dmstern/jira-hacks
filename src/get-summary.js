@@ -20,3 +20,4 @@ if (window.getSelection) {
   }
 }
 
+JIRA.Messages.showSuccessMsg("📋 Issue Key & Summary copied successfully to clipboard")
