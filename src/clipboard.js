@@ -6,14 +6,16 @@ function main() {
     document.querySelector('.issuerow.focused > .summary');
   var key =
     document.querySelector('#key-val') ||
-    document.querySelector('#issuekey-val') ||
+    document.querySelector('#issuekey-val a') ||
     document.querySelector('.issuerow.focused > .issuekey');
   var keyVal = key.textContent;
-  var keyNode = document.createTextNode(`${keyVal} `);
+  var summaryVal = summary.textContent;
+  var selectNode = document.createTextNode(`${keyVal} ${summaryVal}`);
+
+  document.body.appendChild(selectNode);
 
   var range = document.createRange();
-  range.selectNode(summary);
-  range.insertNode(keyNode);
+  range.selectNode(selectNode);
 
   if (!window.getSelection) {
     return;
@@ -22,7 +24,7 @@ function main() {
   window.getSelection().addRange(range);
   document.execCommand('copy');
 
-  keyNode.parentNode.removeChild(keyNode);
+  document.body.removeChild(selectNode);
 
   clearSelection();
 
@@ -33,10 +35,6 @@ function main() {
 }
 
 function clearSelection() {
-  if (!window.getSelection) {
-    return;
-  }
-
   if (window.getSelection().empty) {
     window.getSelection().empty();
   } else if (window.getSelection().removeAllRanges) {
