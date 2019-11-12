@@ -11,7 +11,7 @@ This is tiny collection of bookmarklets to bring new handy features to Jira.
 | ------------------------- | :----------------------------------------------------------------: | -------------------------------------------------------------------------------------------------------------: | -------------------------------------------------- |
 | ⏲ Σ [ Remaining Estimate] | [./bookmark-urls/estimate-effort](./bookmark-urls/estimate-effort) |                  You get a popup window with the estimated remaining effort of the currently displayed issues. | issue navigator                                    |
 | 💶 [ Calculate Costs ]    | [./bookmark-urls/calculate-costs](./bookmark-urls/calculate-costs) | You get prompted the cost per hour and receive an aggerated sum of the costs of the currently filtered issues. | issue navigator                                    |
-| 📋 ← [ Issue Title ]      |      [./bookmark-urls/clipoboard](./bookmark-urls/clipoboard)      |                                                                          Copy issue key + summary to clipboard | issue detail view / Kanban board / issue navigator |
+| 📋 ← [ Issue Title ]      |      [./bookmark-urls/clipboard](./bookmark-urls/clipboard)      |                                                                          Copy issue key + summary to clipboard | issue detail view / Kanban board / issue navigator |
 
 ## Prerequisites / preparation for effort calculation
 
