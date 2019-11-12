@@ -10,7 +10,8 @@
   "scripts": {
     "bundle:effort": "rollup src/estimate-effort.js --file build/bundle/estimate-effort.js --format iife",
     "bundle:costs": "rollup src/calculate-costs.js --file build/bundle/calculate-costs.js --format iife",
-    "bundle": "npm run bundle:effort && npm run bundle:costs",
+    "bundle:clipboard": "rollup src/clipboard.js --file build/bundle/clipboard.js --format iife",
+    "bundle": "npm run bundle:effort && npm run bundle:costs && npm run bundle:clipboard",
     "build": "npm run bundle && minify build/bundle -d build/min && node tools/wrap.js",
     "test": "eslint src"
   },
