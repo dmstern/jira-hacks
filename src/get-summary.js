@@ -1,5 +1,5 @@
-var summary = document.getElementById('summary-val');
-var key = document.querySelector('#key-val') || document.querySelector('#issuekey-val');
+var summary = document.getElementById('summary-val') || document.querySelector('.issuerow.focused > .summary');
+var key = document.querySelector('#key-val') || document.querySelector('#issuekey-val') || document.querySelector('.issuerow.focused > .issuekey');
 var keyVal = key.textContent;
 var keyNode = document.createTextNode(`${keyVal} `);
 
