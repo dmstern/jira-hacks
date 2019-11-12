@@ -2,12 +2,12 @@ main();
 
 function main() {
   var summary =
-    document.getElementById("summary-val") ||
-    document.querySelector(".issuerow.focused > .summary");
+    document.getElementById('summary-val') ||
+    document.querySelector('.issuerow.focused > .summary');
   var key =
-    document.querySelector("#key-val") ||
-    document.querySelector("#issuekey-val") ||
-    document.querySelector(".issuerow.focused > .issuekey");
+    document.querySelector('#key-val') ||
+    document.querySelector('#issuekey-val') ||
+    document.querySelector('.issuerow.focused > .issuekey');
   var keyVal = key.textContent;
   var keyNode = document.createTextNode(`${keyVal} `);
 
@@ -20,19 +20,26 @@ function main() {
   }
 
   window.getSelection().addRange(range);
-  document.execCommand("copy");
+  document.execCommand('copy');
 
   keyNode.parentNode.removeChild(keyNode);
 
-  if (window.getSelection) {
-    if (window.getSelection().empty) {
-      window.getSelection().empty();
-    } else if (window.getSelection().removeAllRanges) {
-      window.getSelection().removeAllRanges();
-    }
+  clearSelection();
+
+  // eslint-disable-next-line no-undef
+  JIRA.Messages.showSuccessMsg(
+    'Issue Key & Summary copied successfully to clipboard 📋.'
+  );
+}
+
+function clearSelection() {
+  if (!window.getSelection) {
+    return;
   }
 
-  JIRA.Messages.showSuccessMsg(
-    "Issue Key & Summary copied successfully to clipboard 📋."
-  );
+  if (window.getSelection().empty) {
+    window.getSelection().empty();
+  } else if (window.getSelection().removeAllRanges) {
+    window.getSelection().removeAllRanges();
+  }
 }
