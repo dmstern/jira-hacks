@@ -11,8 +11,7 @@ export function getIssueTitle() {
   var summaryVal = summary.textContent;
 
   return {
-    keyNode: key,
-    summaryNode: summary,
+    keyString: `${keyVal}`,
     titleString: `${keyVal} ${summaryVal}`
   };
 }

@@ -6,18 +6,27 @@ function clearSelection() {
   }
 }
 
-export function copy2Clipboard(selectNode) {
+export function copy2Clipboard(titleString, successMsg) {
+  var selectNode = document.createTextNode(`${titleString}`);
+
   document.body.appendChild(selectNode);
 
-  var range = document.createRange();
-  range.selectNode(selectNode);
+  setTimeout(() => {
+    var range = document.createRange();
+    range.selectNode(selectNode);
 
-  if (!window.getSelection) {
-    return;
-  }
+    if (!window.getSelection) {
+      return;
+    }
 
-  window.getSelection().addRange(range);
-  document.execCommand('copy');
+    window.getSelection().addRange(range);
+    document.execCommand('copy');
 
-  clearSelection();
+    clearSelection();
+
+    // eslint-disable-next-line no-undef
+    JIRA.Messages.showSuccessMsg(successMsg);
+
+    document.body.removeChild(selectNode);
+  }, 300);
 }
