@@ -1,4 +1,4 @@
-import { getLabels } from './l10n';
+import { l10n } from './l10n';
 
 export default function() {
   const selectors = {
@@ -6,8 +6,6 @@ export default function() {
     details: '.details-layout',
     estimateColumn: '.aggregatetimeestimate'
   };
-
-  const l10n = getLabels(document.documentElement.lang);
 
   const userIsInNavigator =
     document.querySelector(selectors.navigator) !== null;

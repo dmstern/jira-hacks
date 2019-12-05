@@ -32,6 +32,5 @@ const labels = {
   }
 };
 
-export function getLabels(lang) {
-  return lang in labels ? labels[lang] : labels.en;
-}
+const lang = document.documentElement.lang;
+export const l10n = lang in labels ? labels[lang] : labels.en;

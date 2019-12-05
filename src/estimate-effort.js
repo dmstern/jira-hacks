@@ -1,4 +1,4 @@
-import { getLabels } from './util/l10n';
+import { l10n } from './util/l10n';
 import { hoursPerWorkDay, minutesPer } from './util/constants';
 import sumRemainingEstimate from './util/sumRemainingEstimate';
 import getEstimationCells from './util/getEstimationCells';
@@ -10,7 +10,6 @@ try {
 }
 
 function main() {
-  const l10n = getLabels(document.documentElement.lang);
   const estimationCells = getEstimationCells();
   const remainingEstimationSum = sumRemainingEstimate(estimationCells);
   const estimationInPT =

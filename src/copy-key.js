@@ -1,8 +1,6 @@
 import { copy2Clipboard } from './util/clipboard';
 import { getIssueTitle } from './util/getIssueTitle';
-import { getLabels } from './util/l10n';
-
-const l10n = getLabels(document.documentElement.lang);
+import { l10n } from './util/l10n';
 
 main();
 

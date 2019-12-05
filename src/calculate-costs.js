@@ -1,4 +1,4 @@
-import { getLabels } from './util/l10n';
+import { l10n } from './util/l10n';
 import {
   centsPerHourDefault,
   minutesPer,
@@ -14,7 +14,6 @@ try {
 }
 
 function main() {
-  const l10n = getLabels(document.documentElement.lang);
   const estimationCells = getEstimationCells();
   const remainingEstimationSum = sumRemainingEstimate(estimationCells);
   const estimationInHours = remainingEstimationSum / minutesPer.hour;
