@@ -28,5 +28,5 @@ export function copy2Clipboard(titleString, successMsg) {
     JIRA.Messages.showSuccessMsg(successMsg);
 
     document.body.removeChild(selectNode);
-  }, 300);
+  }, 200);
 }
