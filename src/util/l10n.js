@@ -8,7 +8,11 @@ const labels = {
     goToNavigator: () => 'Error: Please go to the Jira issue navigator.',
     changeViewTypeToList: () => 'Error: Please change view type to list.',
     enableRemainingEstimateColumn: () =>
-      'Error: Please enable the column \'Σ Remaining Estimate.\''
+      'Error: Please enable the column \'Σ Remaining Estimate.\'',
+    copiedIssueTitle2Clipboard: () =>
+      'Issue key & summary copied successfully to clipboard 📋.',
+    copiedIssueKey2Clipboard: () =>
+      'Issue key copied successfully to clipboard 📋.'
   },
   de: {
     pleaseEnter: () => 'Bitte die Kosten für eine Arbeitsstunde in € eingeben:',
@@ -20,7 +24,11 @@ const labels = {
     goToNavigator: () => 'Fehler: Bitte gehe zum Jira Vorgangsnavigator.',
     changeViewTypeToList: () => 'Fehler: Bitte wechsel die Anzeige zu \'Liste\'.',
     enableRemainingEstimateColumn: () =>
-      'Fehler: Bitte aktiviere die Spalte \'Σ Remaining Estimate.\''
+      'Fehler: Bitte aktiviere die Spalte \'Σ Remaining Estimate.\'',
+    copiedIssueTitle2Clipboard: () =>
+      'Ticketnummer & -zusammenfassung erfolgreich in die Zwischenablage kopiert 📋.',
+    copiedIssueKey2Clipboard: () =>
+      'Ticketnummer erfolgreich in die Zwischenablage kopiert 📋.',
   }
 };
 

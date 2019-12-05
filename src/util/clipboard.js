@@ -19,7 +19,5 @@ export function copy2Clipboard(selectNode) {
   window.getSelection().addRange(range);
   document.execCommand('copy');
 
-  document.body.removeChild(selectNode);
-
   clearSelection();
 }

@@ -6,8 +6,10 @@ export function getIssueTitle() {
     document.querySelector('#key-val') ||
     document.querySelector('#issuekey-val a') ||
     document.querySelector('.issuerow.focused > .issuekey');
+
   var keyVal = key.textContent;
   var summaryVal = summary.textContent;
+
   return {
     keyNode: key,
     summaryNode: summary,
