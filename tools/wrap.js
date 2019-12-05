@@ -2,7 +2,8 @@ const fs = require('fs');
 
 wrap('estimate-effort');
 wrap('calculate-costs');
-wrap('clipboard');
+wrap('copy-key');
+wrap('copy-title');
 
 function wrap(file) {
   fs.readFile(`build/min/${file}.js`, (err, data) => {
