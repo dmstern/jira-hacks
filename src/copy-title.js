@@ -7,10 +7,12 @@ function main() {
   var title = getIssueTitle();
   var selectNode = document.createTextNode(`${title.titleString}`);
 
-  copy2Clipboard(selectNode);
+  setTimeout(() => {
+    copy2Clipboard(selectNode);
 
-  // eslint-disable-next-line no-undef
-  JIRA.Messages.showSuccessMsg(
-    'Issue Key & Summary copied successfully to clipboard 📋.'
-  );
+    // eslint-disable-next-line no-undef
+    JIRA.Messages.showSuccessMsg(
+      'Issue Key & Summary copied successfully to clipboard 📋.'
+    );
+  }, 300);
 }
