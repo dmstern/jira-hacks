@@ -12,8 +12,8 @@
     "bundle:costs": "rollup src/calculate-costs.js --file build/bundle/calculate-costs.js --format iife",
     "bundle:copyTitle": "rollup src/copy-title.js --file build/bundle/copy-title.js --format iife",
     "bundle:copyKey": "rollup src/copy-key.js --file build/bundle/copy-key.js --format iife",
-    "bundle:index": "rollup src/index.js --file build/bundle/index.js --format iife",
-    "bundle": "npm run bundle:effort && npm run bundle:costs && npm run bundle:copyTitle && npm run bundle:copyKey && npm run bundle:index",
+    "bundle:onLoad": "rollup src/on-load/index.js --file dist/on-load/index.js --format iife",
+    "bundle": "npm run bundle:effort && npm run bundle:costs && npm run bundle:copyTitle && npm run bundle:copyKey && npm run bundle:onLoad",
     "build": "npm run bundle && minify build/bundle -d build/min && node tools/wrap.js",
     "format": "prettier --write ./src/**/*",
     "test": "eslint src"

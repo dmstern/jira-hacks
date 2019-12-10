@@ -1,7 +1,7 @@
-import copyTitle from "./util/copyTitle";
-import { l10n } from "./util/l10n";
+import copyTitle from "../util/copyTitle";
+import { l10n } from "../util/l10n";
 
-window.onload = function() {
+export function addCopyButton() {
   const buttonClass = "copy-issue-title-to-clipboard";
   const buttonString = `
     <button
@@ -24,4 +24,4 @@ window.onload = function() {
   button.addEventListener("click", () => {
     copyTitle();
   });
-};
+}
