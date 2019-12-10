@@ -5,7 +5,5 @@ import { l10n } from "./l10n";
 export default function copyTitle() {
   var title = getIssueTitle();
 
-  setTimeout(() => {
-    copy2Clipboard(title.titleString, l10n.copiedIssueTitle2Clipboard());
-  }, 200);
+  copy2Clipboard(title.titleString, l10n.copiedIssueTitle2Clipboard());
 }

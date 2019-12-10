@@ -11,22 +11,20 @@ export function copy2Clipboard(titleString, successMsg) {
 
   document.body.appendChild(selectNode);
 
-  setTimeout(() => {
-    var range = document.createRange();
-    range.selectNode(selectNode);
+  var range = document.createRange();
+  range.selectNode(selectNode);
 
-    if (!window.getSelection) {
-      return;
-    }
+  if (!window.getSelection) {
+    return;
+  }
 
-    window.getSelection().addRange(range);
-    document.execCommand("copy");
+  window.getSelection().addRange(range);
+  document.execCommand("copy");
 
-    clearSelection();
+  clearSelection();
 
-    // eslint-disable-next-line no-undef
-    JIRA.Messages.showSuccessMsg(successMsg);
+  // eslint-disable-next-line no-undef
+  JIRA.Messages.showSuccessMsg(successMsg);
 
-    document.body.removeChild(selectNode);
-  }, 200);
+  document.body.removeChild(selectNode);
 }
