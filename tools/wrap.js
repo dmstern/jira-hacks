@@ -4,6 +4,7 @@ wrap('estimate-effort');
 wrap('calculate-costs');
 wrap('copy-key');
 wrap('copy-title');
+wrap('index');
 
 function wrap(file) {
   fs.readFile(`build/min/${file}.js`, (err, data) => {
