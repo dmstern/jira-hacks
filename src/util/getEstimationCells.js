@@ -1,10 +1,10 @@
-import { l10n } from './l10n';
+import { l10n } from "./l10n";
 
 export default function() {
   const selectors = {
-    navigator: '.navigator-container',
-    details: '.details-layout',
-    estimateColumn: '.aggregatetimeestimate'
+    navigator: ".navigator-container",
+    details: ".details-layout",
+    estimateColumn: ".aggregatetimeestimate",
   };
 
   const userIsInNavigator =

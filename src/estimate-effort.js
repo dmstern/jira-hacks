@@ -1,7 +1,7 @@
-import { l10n } from './util/l10n';
-import { hoursPerWorkDay, minutesPer } from './util/constants';
-import sumRemainingEstimate from './util/sumRemainingEstimate';
-import getEstimationCells from './util/getEstimationCells';
+import { l10n } from "./util/l10n";
+import { hoursPerWorkDay, minutesPer } from "./util/constants";
+import sumRemainingEstimate from "./util/sumRemainingEstimate";
+import getEstimationCells from "./util/getEstimationCells";
 
 try {
   main();

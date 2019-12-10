@@ -1,7 +1,7 @@
-import copyTitle from './util/copyTitle';
+import copyTitle from "./util/copyTitle";
 
 window.onload = function() {
-  const buttonClass = 'copy-issue-title-to-clipboard';
+  const buttonClass = "copy-issue-title-to-clipboard";
   const buttonString = `
     <button 
       style="
@@ -15,11 +15,11 @@ window.onload = function() {
       ></span>
     </button>`;
 
-  const header = document.querySelector('#stalker .aui-page-header-main');
-  header.insertAdjacentHTML('beforeend', buttonString);
+  const header = document.querySelector("#stalker .aui-page-header-main");
+  header.insertAdjacentHTML("beforeend", buttonString);
 
   const button = document.querySelector(`.${buttonClass}`);
-  button.addEventListener('click', () => {
+  button.addEventListener("click", () => {
     copyTitle();
   });
 };

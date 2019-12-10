@@ -1,3 +1,3 @@
-import copyTitle from './util/copyTitle';
+import copyTitle from "./util/copyTitle";
 
 copyTitle();

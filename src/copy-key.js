@@ -1,6 +1,6 @@
-import { copy2Clipboard } from './util/clipboard';
-import { getIssueTitle } from './util/getIssueTitle';
-import { l10n } from './util/l10n';
+import { copy2Clipboard } from "./util/clipboard";
+import { getIssueTitle } from "./util/getIssueTitle";
+import { l10n } from "./util/l10n";
 
 main();
 

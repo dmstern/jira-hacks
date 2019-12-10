@@ -1,11 +1,11 @@
-import { l10n } from './util/l10n';
+import { l10n } from "./util/l10n";
 import {
   centsPerHourDefault,
   minutesPer,
-  centsPerEuro
-} from './util/constants';
-import sumRemainingEstimate from './util/sumRemainingEstimate';
-import getEstimationCells from './util/getEstimationCells';
+  centsPerEuro,
+} from "./util/constants";
+import sumRemainingEstimate from "./util/sumRemainingEstimate";
+import getEstimationCells from "./util/getEstimationCells";
 
 try {
   main();
@@ -19,7 +19,7 @@ function main() {
   const estimationInHours = remainingEstimationSum / minutesPer.hour;
   const userInput = window.prompt(
     l10n.pleaseEnter(),
-    centsPerHourDefault / centsPerEuro
+    centsPerHourDefault / centsPerEuro,
   );
   const costPerHour = parseFloat(userInput) * centsPerEuro;
 

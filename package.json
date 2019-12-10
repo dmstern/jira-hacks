@@ -15,6 +15,7 @@
     "bundle:index": "rollup src/index.js --file build/bundle/index.js --format iife",
     "bundle": "npm run bundle:effort && npm run bundle:costs && npm run bundle:copyTitle && npm run bundle:copyKey",
     "build": "npm run bundle && minify build/bundle -d build/min && node tools/wrap.js",
+    "format": "prettier --write ./src/**/*",
     "test": "eslint src"
   },
   "keywords": [
@@ -25,6 +26,8 @@
   "devDependencies": {
     "babel-minify": "^0.5.0",
     "eslint": "^5.16.0",
+    "eslint-config-prettier": "^6.7.0",
+    "prettier": "^1.19.1",
     "rollup": "^1.15.6"
   }
 }

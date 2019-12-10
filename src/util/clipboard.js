@@ -20,7 +20,7 @@ export function copy2Clipboard(titleString, successMsg) {
     }
 
     window.getSelection().addRange(range);
-    document.execCommand('copy');
+    document.execCommand("copy");
 
     clearSelection();
 
