@@ -4,13 +4,15 @@
     "commonjs": true,
     "es6": true
   },
-  "extends": ["eslint:recommended", "prettier"],
+  "extends": ["eslint:recommended", "eslint-config-prettier"],
+  "plugins": ["eslint-plugin-prettier"],
   "parserOptions": {
     "ecmaVersion": 2017,
     "sourceType": "module"
   },
   "rules": {
     "no-console": "warn",
-    "max-depth": ["warn", 1]
+    "max-depth": ["warn", 1],
+    "prettier/prettier": "error"
   }
 }
