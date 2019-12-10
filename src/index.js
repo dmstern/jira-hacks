@@ -1,9 +1,11 @@
 import copyTitle from "./util/copyTitle";
+import { l10n } from "./util/l10n";
 
 window.onload = function() {
   const buttonClass = "copy-issue-title-to-clipboard";
   const buttonString = `
-    <button 
+    <button
+      title="${l10n.copyClipboardButtonTitle()}"
       style="
         line-height:1em;
         float: right;

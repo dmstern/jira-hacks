@@ -13,6 +13,7 @@ const labels = {
       "Issue key & summary copied successfully to clipboard 📋.",
     copiedIssueKey2Clipboard: () =>
       "Issue key copied successfully to clipboard 📋.",
+    copyClipboardButtonTitle: () => "Copy issue key and summary to clipboard",
   },
   de: {
     pleaseEnter: () => "Bitte die Kosten für eine Arbeitsstunde in € eingeben:",
@@ -29,6 +30,8 @@ const labels = {
       "Ticketnummer & -zusammenfassung erfolgreich in die Zwischenablage kopiert 📋.",
     copiedIssueKey2Clipboard: () =>
       "Ticketnummer erfolgreich in die Zwischenablage kopiert 📋.",
+    copyClipboardButtonTitle: () =>
+      "Ticketnummer & -zusammenfassung in die Zwischenablage kopieren 📋.",
   },
 };
 
